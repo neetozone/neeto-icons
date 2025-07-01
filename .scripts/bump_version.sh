@@ -60,10 +60,8 @@ echo "Version label selected: $VERSION_LABEL"
 
 if [[ -n "$VERSION_LABEL" ]]; then
   bump_package
-  yarn upload
 else
   echo "PR label doesn't exist"
 fi
 
 raise_pr
-
