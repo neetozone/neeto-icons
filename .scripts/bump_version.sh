@@ -14,6 +14,7 @@ bump_package() {
   yarn config set version-tag-prefix "v"
   yarn version --"$VERSION_LABEL" --no-git-tag-version
   echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" >~/.npmrc
+  yarn publish --non-interactive
 }
 
 raise_pr() {
