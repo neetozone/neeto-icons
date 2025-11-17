@@ -4,6 +4,18 @@ module.exports = {
     height: "{props.size}",
   },
   replaceAttrValues: generateReplaceAttrValues(),
+  svgoConfig: {
+    plugins: [
+      {
+        name: "removeViewBox",
+        active: false,
+      },
+      {
+        name: "removeDimensions",
+        active: true,
+      },
+    ],
+  },
 };
 
 function generateReplaceAttrValues() {
