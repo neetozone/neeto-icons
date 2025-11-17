@@ -5,7 +5,7 @@
   "author": "sangameshsomawar",
   "license": "MIT",
   "scripts": {
-    "generate": "npx --yes @svgr/cli  --out-dir dist --native --index-template index-template.js -- ../source"
+    "generate": "svgr  --out-dir dist --native --index-template index-template.js -- ../source"
   },
   "exports": {
     "./typeface-logos": {
@@ -27,8 +27,14 @@
       "import": "./dist/icons"
     }
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@svgr/cli": "^8.1.0"
+  },
   "dependencies": {},
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
+  },
   "repository": "https://github.com/bigbinary/neeto-icons.git",
   "sideEffects": false
 }
