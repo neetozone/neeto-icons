@@ -17,6 +17,17 @@ bump_package() {
   yarn publish --non-interactive
 }
 
+bump_react_native_package() {
+  echo "== Bump the React Native package version =="
+  cd native
+  yarn install
+  yarn generate
+  yarn config set version-tag-prefix "v"
+  yarn version --"$VERSION_LABEL" --no-git-tag-version
+  echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" >~/.npmrc
+  yarn publish --non-interactive
+}
+
 raise_pr() {
   git config user.name "Abhay V Ashokan"
   git config user.email "abhayvashokan@gmail.com"
@@ -61,6 +72,7 @@ echo "Version label selected: $VERSION_LABEL"
 
 if [[ -n "$VERSION_LABEL" ]]; then
   bump_package
+  bump_react_native_package
 else
   echo "PR label doesn't exist"
 fi
