@@ -69,12 +69,13 @@
     }
   },
   "scripts": {
-    "start": "yarn build && NODE_ENV=development webpack serve --open --mode development --config webpack.dev.config.cjs",
-    "build-preview": "NODE_ENV=production webpack serve --open --mode production --config webpack.dev.config.cjs --port 3000",
-    "build:pre": "node build/index.mjs",
-    "build:es": "babel  --extensions \".js,.jsx\" generate --out-dir=dist",
-    "build:cjs": "BABEL_MODE=commonjs babel  --extensions \".js,.jsx\" generate --out-dir=dist/cjs",
-    "build": "yarn build:pre && yarn build:es && yarn build:cjs"
+    "start": "yarn bundle && NODE_ENV=development webpack serve --open --mode development --config webpack.dev.config.cjs",
+    "build": "yarn bundle && NODE_ENV=production webpack --mode production --config webpack.prod.config.cjs",
+    "serve": "serve preview -l ${PORT:-3000} -s",
+    "bundle:pre": "node build/index.mjs",
+    "bundle:es": "babel  --extensions \".js,.jsx\" generate --out-dir=dist",
+    "bundle:cjs": "BABEL_MODE=commonjs babel  --extensions \".js,.jsx\" generate --out-dir=dist/cjs",
+    "bundle": "yarn bundle:pre && yarn bundle:es && yarn bundle:cjs"
   },
   "files": [
     "dist",
@@ -111,11 +112,14 @@
     "react-dom": "18.3.1",
     "react-hot-toast": "^2.1.1",
     "react-router-dom": "^6.20.1",
+    "serve": "^14.2.1",
     "style-loader": "^3.3.1",
+    "mini-css-extract-plugin": "^2.7.6",
     "uppercamelcase": "^3.0.0",
     "webpack": "^5.64.1",
     "webpack-cli": "^4.9.1",
-    "webpack-dev-server": "^4.5.0"
+    "webpack-dev-server": "^4.5.0",
+    "webpack-merge": "^5.9.0"
   },
   "peerDependencies": {
     "react": "18.3.1",

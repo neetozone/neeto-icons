@@ -1,9 +1,9 @@
 const { merge } = require("webpack-merge");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const baseConfig = require("./webpack.base.config.cjs");
 
 module.exports = merge(baseConfig, {
-  mode: "development",
-  devtool: "eval-cheap-source-map",
+  mode: "production",
   module: {
     rules: [
       {
@@ -11,23 +11,31 @@ module.exports = merge(baseConfig, {
         use: [
           {
             loader: "file-loader",
+            options: {
+              outputPath: "assets",
+            },
           },
         ],
       },
       {
         test: /\.s[ac]ss|css$/i,
         use: [
-          "style-loader",
+          MiniCssExtractPlugin.loader,
           "css-loader",
         ],
       },
     ],
   },
   output: {
-    filename: "bundle.js",
+    filename: "bundle.[contenthash].js",
+    clean: true,
   },
-  devServer: {
-    historyApiFallback: true,
-    allowedHosts: "all",
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: "styles.[contenthash].css",
+    }),
+  ],
+  optimization: {
+    minimize: true,
   },
 });
