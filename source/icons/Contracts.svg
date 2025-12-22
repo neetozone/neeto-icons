@@ -1,13 +1,13 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_2358_5247)">
-<path d="M8 21H6C5.20435 21 4.44129 20.6839 3.87868 20.1213C3.31607 19.5587 3 18.7956 3 18V17H8.5" stroke="#87929D" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M5 17V6C5 5.20435 5.31607 4.44129 5.87868 3.87868C6.44129 3.31607 7.20435 3 8 3H17V10" stroke="#87929D" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M9 7H13" stroke="#87929D" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M9 11H13" stroke="#87929D" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M18.42 12.61C18.8138 12.2162 19.348 11.9949 19.905 11.9949C20.462 11.9949 20.9962 12.2162 21.39 12.61C21.7838 13.0039 22.0051 13.538 22.0051 14.095C22.0051 14.652 21.7838 15.1862 21.39 15.58L15 22H12V19L18.42 12.61Z" stroke="#87929D" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<g clip-path="url(#clip0_188_255)">
+<path d="M8 21H6C5.20435 21 4.44129 20.6839 3.87868 20.1213C3.31607 19.5587 3 18.7956 3 18V17H8.5" stroke="#344054" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M5 17V6C5 5.20435 5.31607 4.44129 5.87868 3.87868C6.44129 3.31607 7.20435 3 8 3H17V10" stroke="#344054" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M9 7H13" stroke="#344054" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M9 11H13" stroke="#344054" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M18.42 12.61C18.8138 12.2161 19.348 11.9949 19.905 11.9949C20.462 11.9949 20.9962 12.2161 21.39 12.61C21.7838 13.0038 22.0051 13.538 22.0051 14.095C22.0051 14.652 21.7838 15.1861 21.39 15.58L15 22H12V19L18.42 12.61Z" stroke="#344054" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <defs>
-<clipPath id="clip0_2358_5247">
+<clipPath id="clip0_188_255">
 <rect width="24" height="24" fill="white"/>
 </clipPath>
 </defs>
