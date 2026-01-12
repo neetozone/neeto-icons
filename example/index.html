@@ -1,15 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
     <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <style>
+      /* Fill only */
+      .neeto-ui-theme--dark [data-dark-fill="white"] {
+        fill: white;
+      }
+
+      /* Stroke only */
+      .neeto-ui-theme--dark [data-dark-stroke="white"] {
+        stroke: white;
+      }
+
+      /* Both fill & stroke */
+      .neeto-ui-theme--dark [data-dark-fill-stroke="white"] {
+        fill: white;
+        stroke: white;
+      }
+
+      /* Fill uses currentColor */
+      .neeto-ui-theme--dark [data-dark-fill="current"] {
+        fill: currentColor;
+      }
+
+      /* Stroke uses currentColor */
+      .neeto-ui-theme--dark [data-dark-stroke="current"] {
+        stroke: currentColor;
+      }
+
+      /* Both fill & stroke use currentColor */
+      .neeto-ui-theme--dark [data-dark-fill-stroke="current"] {
+        fill: currentColor;
+        stroke: currentColor;
+      }
+    </style>
     <script>
       tailwind.config = {
-        darkMode: 'class',
-      }
+        darkMode: "class",
+      };
     </script>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>neetoIcons</title>
   </head>
   <body>
