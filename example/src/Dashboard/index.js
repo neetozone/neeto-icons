@@ -45,25 +45,25 @@ function Dashboard() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900">
+    <div className="min-h-screen neeto-ui-bg-gray-50">
       <Toaster position="bottom-center" />
       <Header {...{ searchTerm, setSearchTerm, searchInputRef }} />
-      <h2 className="px-8 pt-4 text-gray-900 dark:text-white font-semibold">Icons</h2>
+      <h2 className="px-8 pt-4 neeto-ui-text-gray-800 font-semibold">Icons</h2>
       <IconsList size={24} icons={icons} listName="icons" {...commonProps} />
-      <h2 className="px-8 pt-4 text-gray-900 dark:text-white font-semibold">Logos</h2>
+      <h2 className="px-8 pt-4 neeto-ui-text-gray-800 font-semibold">Logos</h2>
       <IconsList icons={logos} listName="logos" {...commonProps} />
-      <h2 className="px-8 pt-4 text-gray-900 dark:text-white font-semibold">App Icons</h2>
+      <h2 className="px-8 pt-4 neeto-ui-text-gray-800 font-semibold">App Icons</h2>
       <IconsList icons={appIcons} listName="appIcons" {...commonProps} />
-      <h2 className="px-8 pt-4 text-gray-900 dark:text-white font-semibold">Typeface Logos</h2>
+      <h2 className="px-8 pt-4 neeto-ui-text-gray-800 font-semibold">Typeface Logos</h2>
       <IconsList
         icons={typefaceLogos}
         listName="typefaceLogos"
         className="grid w-full grid-cols-2 gap-4 px-8 py-4 md:grid-cols-2 lg:grid-cols-4"
         {...commonProps}
       />
-      <h2 className="px-8 pt-4 text-gray-900 dark:text-white font-semibold">Misc Icons</h2>
+      <h2 className="px-8 pt-4 neeto-ui-text-gray-800 font-semibold">Misc Icons</h2>
       <IconsList icons={miscIcons} listName="miscIcons" {...commonProps} />
-      <h2 className="px-8 pt-4 text-gray-900 dark:text-white font-semibold">Elements</h2>
+      <h2 className="px-8 pt-4 neeto-ui-text-gray-800 font-semibold">Elements</h2>
       <IconsList icons={elements} listName="elements" {...commonProps} />
     </div>
   );

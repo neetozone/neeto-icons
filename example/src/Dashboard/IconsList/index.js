@@ -42,7 +42,7 @@ export default function IconsList({
     name.toLowerCase().includes(searchTerm.toLowerCase())
   );
   return filteredIconsList.length === 0 ? (
-    <div className="px-8 text-sm text-gray-600 dark:text-gray-400">No {listName} found.</div>
+    <div className="px-8 text-sm neeto-ui-text-gray-600">No {listName} found.</div>
   ) : (
     <div className={className}>
       {filteredIconsList.map((key) => {
