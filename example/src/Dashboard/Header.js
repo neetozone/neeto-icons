@@ -5,10 +5,10 @@ const Header = ({ searchTerm, setSearchTerm, searchInputRef }) => {
   const [isDark, toggleDarkMode] = useDarkMode();
 
   return (
-    <header className="flex items-center justify-between px-8 py-4 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800 sticky top-0 z-10">
+    <header className="flex items-center justify-between px-8 py-4 neeto-ui-bg-gray-50 neeto-ui-border-gray-300 border-b sticky top-0 z-10">
       <div>
-        <h1 className="text-2xl font-bold text-gray-900 dark:text-white">neetoIcons</h1>
-        <div className="text-sm text-gray-500 dark:text-gray-400">
+        <h1 className="text-2xl font-bold neeto-ui-text-gray-800">neetoIcons</h1>
+        <div className="text-sm neeto-ui-text-gray-600">
           Click on an icon to copy the name.
         </div>
       </div>
@@ -17,7 +17,7 @@ const Header = ({ searchTerm, setSearchTerm, searchInputRef }) => {
           href="https://github.com/bigbinary/neeto-icons#usage"
           target="_blank"
           rel="noreferrer"
-          className="flex items-center space-x-0.5 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white mr-5"
+          className="flex items-center space-x-0.5 text-sm font-medium neeto-ui-text-gray-700 hover:neeto-ui-text-gray-800 mr-5"
         >
           Usage
         </a>
@@ -25,7 +25,7 @@ const Header = ({ searchTerm, setSearchTerm, searchInputRef }) => {
           href="https://github.com/bigbinary/neeto-icons"
           target="_blank"
           rel="noreferrer"
-          className="flex items-center space-x-0.5 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white mr-5"
+          className="flex items-center space-x-0.5 text-sm font-medium neeto-ui-text-gray-700 hover:neeto-ui-text-gray-800 mr-5"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -43,7 +43,7 @@ const Header = ({ searchTerm, setSearchTerm, searchInputRef }) => {
         </a>
         <button
           onClick={toggleDarkMode}
-          className="mr-5 p-2 rounded-md text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none transition-colors"
+          className="mr-5 p-2 rounded-md neeto-ui-text-gray-700 hover:neeto-ui-bg-gray-200 focus:outline-none transition-colors"
           aria-label="Toggle dark mode"
         >
           {isDark ? (
@@ -90,7 +90,7 @@ const Header = ({ searchTerm, setSearchTerm, searchInputRef }) => {
           placeholder="Search for an icon"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          className="px-4 py-2 text-sm rounded w-72 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:bg-gray-100 dark:focus:bg-gray-700 border border-gray-200 dark:border-gray-700"
+          className="px-4 py-2 text-sm rounded w-72 neeto-ui-bg-gray-100 neeto-ui-text-gray-800 focus:outline-none focus:neeto-ui-bg-gray-200 neeto-ui-border-gray-300 border"
         />
       </div>
     </header>
