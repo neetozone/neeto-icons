@@ -7,37 +7,13 @@
     />
     <script src="https://cdn.tailwindcss.com/3.4.16"></script>
     <style>
-      /* Fill only */
-      .neeto-ui-theme--dark [data-dark-fill="white"] {
-        fill: white;
-      }
+    .neeto-ui-theme--dark [data-dark-mode-color="true"][fill]:not([fill="none"]) {
+      fill: currentColor;
+    }
 
-      /* Stroke only */
-      .neeto-ui-theme--dark [data-dark-stroke="white"] {
-        stroke: white;
-      }
-
-      /* Both fill & stroke */
-      .neeto-ui-theme--dark [data-dark-fill-stroke="white"] {
-        fill: white;
-        stroke: white;
-      }
-
-      /* Fill uses currentColor */
-      .neeto-ui-theme--dark [data-dark-fill="current"] {
-        fill: currentColor;
-      }
-
-      /* Stroke uses currentColor */
-      .neeto-ui-theme--dark [data-dark-stroke="current"] {
-        stroke: currentColor;
-      }
-
-      /* Both fill & stroke use currentColor */
-      .neeto-ui-theme--dark [data-dark-fill-stroke="current"] {
-        fill: currentColor;
-        stroke: currentColor;
-      }
+    .neeto-ui-theme--dark [data-dark-mode-color="true"][stroke]:not([stroke="none"]) {
+      stroke: currentColor;
+    }
     </style>
     <script>
       tailwind.config = {
