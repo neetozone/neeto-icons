@@ -11,6 +11,7 @@ module.exports = function (api) {
   if (process.env.BABEL_MODE === "commonjs") {
     overrides.push({
       presets: [["@babel/preset-env", { modules: "commonjs" }]],
+      plugins: ["add-module-exports"],
     });
   }
 
