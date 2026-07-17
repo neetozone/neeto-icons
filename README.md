@@ -1,7 +1,7 @@
 # neetoIcons
 
-The neetoIcons and neetoIconsRN library are a collection of SVG React component
-icons that drives the experience in the neeto products built at BigBinary.
+The neetoIcons and neetoIconsRN library are a collection of SVG React component icons that drives
+the experience in the neeto products built at BigBinary.
 
 ## Contents
 
@@ -26,14 +26,12 @@ yarn add @bigbinary/neeto-icons-rn
 
 ### Instructions for development
 
-Check the [Frontend package development
-guide](https://neeto-engineering.neetokb.com/p/a-d34cb4b0) for step-by-step
-instructions to develop the frontend package.
+Check the [Frontend package development guide](https://neeto-engineering.neetokb.com/p/a-d34cb4b0) for step-by-step instructions to develop the frontend package.
 
 #### Adding a new icon to the library
 
-1. **Add the SVG file -** Place the SVG file for the new icon in the appropriate
-   folder under the `source` directory. For example:
+1. **Add the SVG file -**
+   Place the SVG file for the new icon in the appropriate folder under the `source` directory. For example:
    - `icons/` for normal icons
    - `logos/` for product logos
    - `typefaceLogos/` for product typeface logos
@@ -41,11 +39,11 @@ instructions to develop the frontend package.
    - `misc/` for miscellaneous icons
    - `elements/` for elements
 
-2. **Name the file appropriately -** Use PascalCase for the file name (e.g.,
-   `NewIcon.svg`).
+2. **Name the file appropriately -**
+   Use PascalCase for the file name (e.g., `NewIcon.svg`).
 
-3. **Verify the icon -** Run the `yarn start` command to verify the React
-   component for the new icon:
+3. **Verify the icon -**
+   Run the `yarn start` command to verify the React component for the new icon:
 
 ### Usage
 
@@ -172,6 +170,4 @@ Anywhere in your React file
 
 ## Instructions for Publishing
 
-Consult the [building and releasing
-packages](https://neeto-engineering.neetokb.com/articles/building-and-releasing-packages)
-guide for details on how to publish.
+Consult the [building and releasing packages](https://neeto-engineering.neetokb.com/articles/building-and-releasing-packages) guide for details on how to publish.
