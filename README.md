@@ -167,6 +167,6 @@ Anywhere in your React file
 
 ## Instructions for Publishing
 
-Consult the [building and releasing
-packages](https://neeto-engineering.neetokb.com/articles/building-and-releasing-packages) guide for details on how to
-publish.
+Consult the
+[building and releasing packages](https://neeto-engineering.neetokb.com/articles/building-and-releasing-packages) guide
+for details on how to publish.
