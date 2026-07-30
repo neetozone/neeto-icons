@@ -14,6 +14,24 @@ module.exports = {
         name: "removeDimensions",
         active: true,
       },
+      {
+        name: "prefixIds",
+        params: {
+          delim: "_",
+          prefixIds: true,
+          prefixClassNames: true,
+        },
+      },
+      {
+        name: "removeXMLNS",
+        active: true,
+      },
+      {
+        name: "removeAttrs",
+        params: {
+          attrs: ["data-figma-.*"],
+        },
+      },
     ],
   },
 };
