@@ -35,6 +35,9 @@
   },
   "devDependencies": {
     "@svgr/cli": "^8.1.0",
+    "@types/react": "^19.0.0",
+    "react": "^19.0.0",
+    "react-native": ">=0.78.0",
     "react-native-svg": ">=13.0.0",
     "typescript": "^5.7.0"
   },
