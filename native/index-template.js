@@ -7,26 +7,27 @@ function defaultIndexTemplate(filePaths) {
     const exportName = /^\d/.test(basename) ? `Svg${basename}` : basename;
     return `export { default as ${exportName} } from './${basename}'`;
   });
+
   const distPath = path.join(__dirname, "dist");
   const folderNames = fs
     .readdirSync(distPath, { withFileTypes: true })
     .filter((entry) => entry.isDirectory())
     .map((entry) => entry.name);
 
-  const indexPath = path.join(distPath, "index.js");
   const importStatements = folderNames.map(
     (folderName) =>
       `import * as ${folderName.replace(
         /^./,
         folderName[0].toUpperCase()
-      )} from './${folderName}';`
+      )} from './${folderName}'`
   );
-  let indexContent = importStatements;
+
   const exportStatement = `export { ${folderNames
     .map((folderName) => folderName.replace(/^./, folderName[0].toUpperCase()))
     .join(", ")} }`;
-  indexContent.push(exportStatement);
-  fs.writeFileSync(indexPath, indexContent.join("\n"));
+
+  const indexContent = [...importStatements, exportStatement].join("\n");
+  fs.writeFileSync(path.join(distPath, "index.ts"), indexContent);
 
   return exportEntries.join("\n");
 }

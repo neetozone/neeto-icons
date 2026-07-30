@@ -1,7 +1,11 @@
+const template = require("./template");
+
 module.exports = {
+  typescript: true,
+  template,
   svgProps: {
-    width: "{props.size}",
-    height: "{props.size}",
+    width: "{size}",
+    height: "{size}",
   },
   replaceAttrValues: generateReplaceAttrValues(),
   svgoConfig: {
@@ -63,7 +67,7 @@ function generateReplaceAttrValues() {
   ];
 
   return colorValues.reduce((result, value) => {
-    result[value] = "{props.color}";
+    result[value] = "{color}";
     return result;
   }, {});
 }
