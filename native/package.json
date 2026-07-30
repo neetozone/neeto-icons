@@ -9,22 +9,28 @@
   },
   "exports": {
     "./typeface-logos": {
-      "import": "./dist/typefaceLogos"
+      "import": "./dist/typefaceLogos",
+      "default": "./dist/typefaceLogos"
     },
     "./app-icons": {
-      "import": "./dist/appIcons"
+      "import": "./dist/appIcons",
+      "default": "./dist/appIcons"
     },
     "./logos": {
-      "import": "./dist/logos"
+      "import": "./dist/logos",
+      "default": "./dist/logos"
     },
     "./misc": {
-      "import": "./dist/misc"
+      "import": "./dist/misc",
+      "default": "./dist/misc"
     },
     "./elements": {
-      "elements": "./dist/elements"
+      "import": "./dist/elements",
+      "default": "./dist/elements"
     },
     ".": {
-      "import": "./dist/icons"
+      "import": "./dist/icons",
+      "default": "./dist/icons"
     }
   },
   "devDependencies": {
@@ -33,7 +39,8 @@
   "dependencies": {},
   "peerDependencies": {
     "react": "*",
-    "react-native": "*"
+    "react-native": "*",
+    "react-native-svg": ">=13.0.0"
   },
   "repository": "https://github.com/bigbinary/neeto-icons.git",
   "sideEffects": false
