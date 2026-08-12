@@ -28,6 +28,10 @@
       "import": "./dist/elements/index.ts",
       "default": "./dist/elements/index.ts"
     },
+    "./types": {
+      "import": "./types.ts",
+      "default": "./types.ts"
+    },
     ".": {
       "import": "./dist/icons/index.ts",
       "default": "./dist/icons/index.ts"
