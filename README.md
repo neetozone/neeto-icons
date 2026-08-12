@@ -64,6 +64,54 @@ Anywhere in your React file
 <Clock color="#1e1e20" size={24} />
 ```
 
+### React Native imports
+
+Every category is available as a barrel:
+
+```javascript
+import { NeetoSite } from "@bigbinary/neeto-icons-rn/app-icons";
+import { Keyboard } from "@bigbinary/neeto-icons-rn/elements";
+import { Clock } from "@bigbinary/neeto-icons-rn/icons";
+import { Neeto } from "@bigbinary/neeto-icons-rn/logos";
+import { Windows } from "@bigbinary/neeto-icons-rn/misc";
+import { Neeto as NeetoTypeface } from "@bigbinary/neeto-icons-rn/typeface-logos";
+```
+
+Each icon can also be imported on its own, as a default export, so that the bundler only pulls in what is used:
+
+```javascript
+import Clock from "@bigbinary/neeto-icons-rn/icons/Clock";
+import Neeto from "@bigbinary/neeto-icons-rn/logos/Neeto";
+```
+
+Every category is also reachable through a single namespaced entry point:
+
+```javascript
+import { Icons, Logos, Misc } from "@bigbinary/neeto-icons-rn/namespaces";
+
+<Icons.Clock size={24} />;
+```
+
+The props type is exported separately:
+
+```typescript
+import type { IconProps } from "@bigbinary/neeto-icons-rn/types";
+```
+
+#### Metro configuration
+
+These subpaths are declared through the `exports` field of the package, which Metro honours by default only from React
+Native 0.79 onward. On earlier versions the field is ignored and the imports above fail to resolve, so enable it in
+`metro.config.js`:
+
+```javascript
+module.exports = {
+  resolver: {
+    unstable_enablePackageExports: true,
+  },
+};
+```
+
 ### Product logos
 
 ```javascript
