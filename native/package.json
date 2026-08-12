@@ -2,6 +2,10 @@
   "name": "@bigbinary/neeto-icons-rn",
   "version": "1.21.0",
   "main": "./dist/icons/index.ts",
+  "files": [
+    "dist",
+    "types.ts"
+  ],
   "author": "sangameshsomawar",
   "license": "MIT",
   "scripts": {
