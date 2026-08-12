@@ -13,54 +13,72 @@
   },
   "exports": {
     "./typeface-logos": {
+      "types": "./dist/typefaceLogos/index.ts",
       "import": "./dist/typefaceLogos/index.ts",
       "default": "./dist/typefaceLogos/index.ts"
     },
     "./typeface-logos/*": {
+      "types": "./dist/typefaceLogos/*.tsx",
       "import": "./dist/typefaceLogos/*.tsx",
       "default": "./dist/typefaceLogos/*.tsx"
     },
     "./app-icons": {
+      "types": "./dist/appIcons/index.ts",
       "import": "./dist/appIcons/index.ts",
       "default": "./dist/appIcons/index.ts"
     },
     "./app-icons/*": {
+      "types": "./dist/appIcons/*.tsx",
       "import": "./dist/appIcons/*.tsx",
       "default": "./dist/appIcons/*.tsx"
     },
     "./logos": {
+      "types": "./dist/logos/index.ts",
       "import": "./dist/logos/index.ts",
       "default": "./dist/logos/index.ts"
     },
     "./logos/*": {
+      "types": "./dist/logos/*.tsx",
       "import": "./dist/logos/*.tsx",
       "default": "./dist/logos/*.tsx"
     },
     "./misc": {
+      "types": "./dist/misc/index.ts",
       "import": "./dist/misc/index.ts",
       "default": "./dist/misc/index.ts"
     },
     "./misc/*": {
+      "types": "./dist/misc/*.tsx",
       "import": "./dist/misc/*.tsx",
       "default": "./dist/misc/*.tsx"
     },
     "./elements": {
+      "types": "./dist/elements/index.ts",
       "import": "./dist/elements/index.ts",
       "default": "./dist/elements/index.ts"
     },
     "./elements/*": {
+      "types": "./dist/elements/*.tsx",
       "import": "./dist/elements/*.tsx",
       "default": "./dist/elements/*.tsx"
     },
     "./types": {
+      "types": "./types.ts",
       "import": "./types.ts",
       "default": "./types.ts"
     },
     ".": {
+      "types": "./dist/icons/index.ts",
+      "import": "./dist/icons/index.ts",
+      "default": "./dist/icons/index.ts"
+    },
+    "./icons": {
+      "types": "./dist/icons/index.ts",
       "import": "./dist/icons/index.ts",
       "default": "./dist/icons/index.ts"
     },
     "./icons/*": {
+      "types": "./dist/icons/*.tsx",
       "import": "./dist/icons/*.tsx",
       "default": "./dist/icons/*.tsx"
     }
