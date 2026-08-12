@@ -1,6 +1,6 @@
 {
   "name": "@bigbinary/neeto-icons",
-  "version": "1.21.0",
+  "version": "1.21.1",
   "author": "vinay0x",
   "license": "MIT",
   "types": "./icons.d.ts",
