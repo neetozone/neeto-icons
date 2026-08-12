@@ -12,21 +12,41 @@
       "import": "./dist/typefaceLogos/index.ts",
       "default": "./dist/typefaceLogos/index.ts"
     },
+    "./typeface-logos/*": {
+      "import": "./dist/typefaceLogos/*.tsx",
+      "default": "./dist/typefaceLogos/*.tsx"
+    },
     "./app-icons": {
       "import": "./dist/appIcons/index.ts",
       "default": "./dist/appIcons/index.ts"
+    },
+    "./app-icons/*": {
+      "import": "./dist/appIcons/*.tsx",
+      "default": "./dist/appIcons/*.tsx"
     },
     "./logos": {
       "import": "./dist/logos/index.ts",
       "default": "./dist/logos/index.ts"
     },
+    "./logos/*": {
+      "import": "./dist/logos/*.tsx",
+      "default": "./dist/logos/*.tsx"
+    },
     "./misc": {
       "import": "./dist/misc/index.ts",
       "default": "./dist/misc/index.ts"
     },
+    "./misc/*": {
+      "import": "./dist/misc/*.tsx",
+      "default": "./dist/misc/*.tsx"
+    },
     "./elements": {
       "import": "./dist/elements/index.ts",
       "default": "./dist/elements/index.ts"
+    },
+    "./elements/*": {
+      "import": "./dist/elements/*.tsx",
+      "default": "./dist/elements/*.tsx"
     },
     "./types": {
       "import": "./types.ts",
@@ -35,6 +55,10 @@
     ".": {
       "import": "./dist/icons/index.ts",
       "default": "./dist/icons/index.ts"
+    },
+    "./icons/*": {
+      "import": "./dist/icons/*.tsx",
+      "default": "./dist/icons/*.tsx"
     }
   },
   "devDependencies": {
