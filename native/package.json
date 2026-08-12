@@ -4,86 +4,89 @@
   "main": "./dist/icons/index.ts",
   "files": [
     "dist",
+    "lib",
     "types.ts"
   ],
   "author": "sangameshsomawar",
   "license": "MIT",
   "scripts": {
-    "generate": "svgr --out-dir dist --native --index-template index-template.js -- ../source"
+    "generate": "svgr --out-dir dist --native --index-template index-template.js -- ../source",
+    "build:types": "tsc -p tsconfig.build.json",
+    "prepublishOnly": "yarn build:types"
   },
   "exports": {
     "./typeface-logos": {
-      "types": "./dist/typefaceLogos/index.ts",
+      "types": "./lib/typescript/dist/typefaceLogos/index.d.ts",
       "import": "./dist/typefaceLogos/index.ts",
       "default": "./dist/typefaceLogos/index.ts"
     },
     "./typeface-logos/*": {
-      "types": "./dist/typefaceLogos/*.tsx",
+      "types": "./lib/typescript/dist/typefaceLogos/*.d.ts",
       "import": "./dist/typefaceLogos/*.tsx",
       "default": "./dist/typefaceLogos/*.tsx"
     },
     "./app-icons": {
-      "types": "./dist/appIcons/index.ts",
+      "types": "./lib/typescript/dist/appIcons/index.d.ts",
       "import": "./dist/appIcons/index.ts",
       "default": "./dist/appIcons/index.ts"
     },
     "./app-icons/*": {
-      "types": "./dist/appIcons/*.tsx",
+      "types": "./lib/typescript/dist/appIcons/*.d.ts",
       "import": "./dist/appIcons/*.tsx",
       "default": "./dist/appIcons/*.tsx"
     },
     "./logos": {
-      "types": "./dist/logos/index.ts",
+      "types": "./lib/typescript/dist/logos/index.d.ts",
       "import": "./dist/logos/index.ts",
       "default": "./dist/logos/index.ts"
     },
     "./logos/*": {
-      "types": "./dist/logos/*.tsx",
+      "types": "./lib/typescript/dist/logos/*.d.ts",
       "import": "./dist/logos/*.tsx",
       "default": "./dist/logos/*.tsx"
     },
     "./misc": {
-      "types": "./dist/misc/index.ts",
+      "types": "./lib/typescript/dist/misc/index.d.ts",
       "import": "./dist/misc/index.ts",
       "default": "./dist/misc/index.ts"
     },
     "./misc/*": {
-      "types": "./dist/misc/*.tsx",
+      "types": "./lib/typescript/dist/misc/*.d.ts",
       "import": "./dist/misc/*.tsx",
       "default": "./dist/misc/*.tsx"
     },
     "./elements": {
-      "types": "./dist/elements/index.ts",
+      "types": "./lib/typescript/dist/elements/index.d.ts",
       "import": "./dist/elements/index.ts",
       "default": "./dist/elements/index.ts"
     },
     "./elements/*": {
-      "types": "./dist/elements/*.tsx",
+      "types": "./lib/typescript/dist/elements/*.d.ts",
       "import": "./dist/elements/*.tsx",
       "default": "./dist/elements/*.tsx"
     },
     "./namespaces": {
-      "types": "./dist/index.ts",
+      "types": "./lib/typescript/dist/index.d.ts",
       "import": "./dist/index.ts",
       "default": "./dist/index.ts"
     },
     "./types": {
-      "types": "./types.ts",
+      "types": "./lib/typescript/types.d.ts",
       "import": "./types.ts",
       "default": "./types.ts"
     },
     ".": {
-      "types": "./dist/icons/index.ts",
+      "types": "./lib/typescript/dist/icons/index.d.ts",
       "import": "./dist/icons/index.ts",
       "default": "./dist/icons/index.ts"
     },
     "./icons": {
-      "types": "./dist/icons/index.ts",
+      "types": "./lib/typescript/dist/icons/index.d.ts",
       "import": "./dist/icons/index.ts",
       "default": "./dist/icons/index.ts"
     },
     "./icons/*": {
-      "types": "./dist/icons/*.tsx",
+      "types": "./lib/typescript/dist/icons/*.d.ts",
       "import": "./dist/icons/*.tsx",
       "default": "./dist/icons/*.tsx"
     }
