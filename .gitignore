@@ -6,6 +6,7 @@
 /dist
 /generate
 native/dist
+native/lib
 native/.yalc
 native/.yalc.lock
 
