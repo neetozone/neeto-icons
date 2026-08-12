@@ -33,7 +33,7 @@ module.exports = {
       {
         name: "removeAttrs",
         params: {
-          attrs: ["data-figma-.*"],
+          attrs: ["data-figma-.*", "filter"],
         },
       },
     ],
