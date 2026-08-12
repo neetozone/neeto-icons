@@ -12,7 +12,8 @@
   "scripts": {
     "generate": "svgr --out-dir dist --native --index-template index-template.js -- ../source",
     "build:types": "tsc -p tsconfig.build.json",
-    "prepublishOnly": "yarn build:types"
+    "prepublishOnly": "yarn build:types",
+    "prepack": "yarn build:types"
   },
   "exports": {
     "./typeface-logos": {
