@@ -1,8 +1,9 @@
 # Context for Dockerfile.neetodeploy (Node apps). NeetoDeploy builds from a
 # clean git clone, so the context only holds committed files. This leaves out
-# VCS and CI metadata, installed packages and browser-test suites. It doesn't
-# leave out build/ or dist/: some apps keep source there (neeto-icons'
-# build/index.mjs), and committed output is the app's to keep.
+# VCS and CI metadata, installed packages, browser-test suites, and the output
+# folders Next.js and Storybook generate (.next, storybook-static), which are
+# never source. It keeps build/, dist/ and out/: some apps keep source there
+# (neeto-icons' build/index.mjs).
 .git
 node_modules
 coverage
@@ -13,3 +14,5 @@ coverage
 .claude
 playwright-tests
 selenium-tests
+.next
+storybook-static
