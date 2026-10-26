@@ -1,0 +1,51 @@
+# syntax=docker/dockerfile:1.7
+#
+# Dockerfile.neetodeploy for Node apps on NeetoDeploy's DockerFileBuild
+# (neetozone/neeto-deploy-web#8734). The Rails apps' Dockerfile.neetodeploy
+# is a separate file; this one is shared by the Node-only apps.
+#
+# Builds on NeetoDeploy's ruby-build image, which has Node and yarn, and runs
+# on node-runtime. The platform passes RUBY_VERSION and NODE_VERSION (from
+# .node-version); the app's Procfile says how to start it.
+#
+# The build sees no secrets and no app env vars. Anything the build bakes in,
+# such as NEXT_PUBLIC_* or REACT_APP_* values, must not come from the app's
+# runtime env.
+
+ARG BASE=348674388966.dkr.ecr.us-east-1.amazonaws.com/neeto-deploy
+ARG RUBY_VERSION
+ARG NODE_VERSION
+
+# Only the files that decide which packages get installed, so a change to the
+# app's code alone leaves the install layer below untouched.
+FROM ${BASE}/ruby-build:${RUBY_VERSION}-node${NODE_VERSION} AS deps
+COPY . /src
+RUN mkdir /deps && cd /src \
+  && for f in package.json yarn.lock .yarnrc .npmrc .node-version .nvmrc; do \
+       if [ -e "$f" ]; then cp -a --parents "$f" /deps/; fi; done
+
+FROM ${BASE}/ruby-build:${RUBY_VERSION}-node${NODE_VERSION} AS build
+WORKDIR /workspace
+COPY --from=deps /deps/ /workspace/
+# HUSKY=0: git hooks need a .git directory, which a build doesn't have.
+ENV YARN_CACHE_FOLDER=/var/cache/neeto-yarn \
+    HUSKY=0
+# The in-cluster npm cache, passed by the platform (neetozone/neeto-deploy-web#8693).
+# Yarn 1 downloads from the exact URLs in yarn.lock, so this layer's copy is
+# pointed at the cache; `COPY . .` below puts the original back.
+ARG NPM_MIRROR_URL=""
+RUN --mount=type=cache,id=neeto-yarn,target=/var/cache/neeto-yarn,sharing=shared \
+    if [ -n "$NPM_MIRROR_URL" ] && [ -f yarn.lock ]; then \
+      sed -i -e "s#https://registry.yarnpkg.com/#${NPM_MIRROR_URL%/}/#g" \
+             -e "s#https://registry.npmjs.org/#${NPM_MIRROR_URL%/}/#g" yarn.lock; fi; \
+    yarn install --frozen-lockfile --production=false --network-timeout 600000
+
+COPY . .
+# The app's own build script, if it has one. Node reads package.json, so the
+# check doesn't depend on how the file is formatted.
+RUN if node -e 'process.exit(require("./package.json").scripts?.build ? 0 : 1)'; then \
+      NODE_ENV=production yarn build; fi
+
+FROM ${BASE}/node-runtime:${NODE_VERSION} AS runtime
+COPY --from=build --chown=1001:1001 /workspace /workspace
+USER 1001:1001
