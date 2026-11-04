@@ -8,5 +8,5 @@ triggers:
 
 commands:
   - checkout
-  - neetoci-version node 22.13
+  - neetoci-version node 22.23.4
   - bash ./.scripts/bump_version.sh
