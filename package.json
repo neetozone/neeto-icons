@@ -88,7 +88,7 @@
   },
   "devDependencies": {
     "@babel/cli": "^7.24.7",
-    "@babel/core": "^7.14.6",
+    "@babel/core": "^8.1.2",
     "@babel/preset-env": "^7.14.7",
     "@babel/preset-react": "^7.14.5",
     "@bigbinary/neetoui": "^8.3.62",
@@ -113,13 +113,13 @@
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "react-hot-toast": "^2.1.1",
-    "react-router-dom": "^6.20.1",
+    "react-router-dom": "^7.18.5",
     "serve": "^14.2.1",
     "style-loader": "^3.3.1",
     "uppercamelcase": "^3.0.0",
     "webpack": "^5.64.1",
     "webpack-cli": "^4.9.1",
-    "webpack-dev-server": "^4.5.0",
+    "webpack-dev-server": "^6.1.0",
     "webpack-merge": "^5.9.0"
   },
   "peerDependencies": {
