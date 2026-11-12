@@ -1,6 +1,6 @@
 {
   "name": "@bigbinary/neeto-icons-rn",
-  "version": "1.21.2",
+  "version": "1.22.0",
   "main": "./dist/icons/index.ts",
   "files": [
     "dist",
