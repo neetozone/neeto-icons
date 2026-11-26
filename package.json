@@ -118,7 +118,7 @@
     "style-loader": "^3.3.1",
     "uppercamelcase": "^3.0.0",
     "webpack": "^5.64.1",
-    "webpack-cli": "^4.9.1",
+    "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^5.2.6",
     "webpack-merge": "^5.9.0"
   },
